@@ -1,9 +1,20 @@
 <?php
-header("Content-Type: application/json");
+// CABECERAS CORS (Añade estas líneas al principio de tu archivo)
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
+header("Access-Control-Allow-Methods: POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+
+// Si es una petición de control (OPTIONS) que hacen los navegadores/dispositivos, responder 200 y salir
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    http_response_code(200);
+    exit;
+}
 
 // 1. CONEXIÓN A TU MYSQL DE RAILWAY
 $host     = "thomas.proxy.rlwy.net";
 $usuario  = "root";
+// ... el resto de tu código permanece exactamente igual
 $password = "QvvQBnWPOXVKAEFZdJTaZnIUQEumobFz"; // Pon aquí la contraseña que te da Railway en la pestaña 'Variables'
 $db_name  = "railway";                 // Por defecto Railway la nombra así, o pon el nombre de tu DB
 $puerto   = 16371;
