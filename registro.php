@@ -4,7 +4,7 @@ header("Content-Type: application/json");
 // 1. CONEXIÓN A TU MYSQL DE RAILWAY
 $host     = "thomas.proxy.rlwy.net";
 $usuario  = "root";
-$password = "TU_CONTRASEÑA_DE_RAILWAY"; // Pon aquí la contraseña que te da Railway en la pestaña 'Variables'
+$password = "QvvQBnWPOXVKAEFZdJTaZnIUQEumobFz"; // Pon aquí la contraseña que te da Railway en la pestaña 'Variables'
 $db_name  = "railway";                 // Por defecto Railway la nombra así, o pon el nombre de tu DB
 $puerto   = 16371;
 
